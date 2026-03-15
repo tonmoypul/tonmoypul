@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scalable Vector Graphics</title>
+  <style>
+    .loader {
+      fill: none;
+      stroke: cyan;
+      stroke-width: 5px;
+      stroke-dasharray: 250;
+      animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+      from{stroke-dashoffset: 250;}
+      to{stroke-dashoffset: 0;}
+    }
+  </style>
+</head>
+
+<body style="background-color: slategray;">
+  <!-- Using SVG to create different shapes -->
+  <section>
+    <!-- Creating a circle -->
+    <h2>Creating a circle with animation
+</h2>
+    <svg viewBox=" 0 0 100 100" style="background-color: honeydew;">
+      <circle cx="50" cy="50" r="40" fill="red" stroke="green" stroke-width="2px">
+        <animate attributeName="r" from="0" to="40" dur="5s"></animate>
+      </circle>
+    </svg>
+
+    <!-- Creating a rectangle -->
+    <h2>Creating a rectangle with animation</h2>
+    <svg viewBox="0 0 100 100" style="background-color: whitesmoke;">
+      <rect x="10" y="10" width="80" height="50" fill="navy" stroke="firebrick" stroke-width="2px">
+        <animate attributeName="width" from="0" to="80" dur="5s"></animate>
+      </rect>
+    </svg>
+
+    <!-- Creating a square -->
+    <h2>Creating a square</h2>
+    <svg viewBox="0 0 100 100" style="background-color: aqua;">
+      <rect x="10" y="10" fill="seagreen" width="80" height="80" stroke="salmon" stroke-width="2px">
+        <animate attributeName="height" from="0" to="80" dur="5s"></animate>
+      </rect>
+    </svg>
+
+    <!-- Creating a line -->
+    <h2>Creating a line</h2>
+    <svg viewBox="0 0 100 100" style="background-color: lime;">
+      <line x1="0" y1="0" x2="50" y2="50" stroke="tomato" stroke-width="2px">
+        <animate attributeName="x2" from="0" to="50" dur="5s"></animate>
+      </line>
+    </svg>
+
+    <!-- Creating an ellipse -->
+    <h2>Creating an ellipse</h2>
+    <svg viewBox="0 0 100 100" style="background-color: fuchsia;">
+      <ellipse cx="50" cy="60" rx="40" ry="20" fill="mintcream" stroke="midnightblue" stroke-width="2px">
+        <animate attributeName="rx" from="0" to="40" dur="7s"></animate>
+      </ellipse>
+    </svg>
+
+    <!-- Creating a polygon -->
+    <h2>Creating a polygon</h2>
+    <svg viewBox="0 0 100 100">
+      <polygon points="50,0 100,100 0,100" fill="blue" stroke="chartreuse" stroke-width="2px">
+        <animate attributeName="fill" from="peru" to="blue" dur="9s"></animate>
+      </polygon>
+    </svg>
+
+    <!-- Creating a path ( the most used one ) -->
+    <h2>Creating a path</h2>
+    <svg viewBox="0 0 100 100" style="background-color: indigo;">
+      
+    </svg>
+  </section>
+  
+  <!-- SVG Groups, Re-use with defs and Gradients -->
+  <section>
+    <!-- Groups -->
+    <h2>Creating Groups of SVG</h2>
+    <svg viewBox="0 0 100 100">
+      <g id="myGroup" fill="red" transform="translate(10,10)">
+        <circle cx="20" cy="20" r="10"></circle>
+        <rect x="40" y="10" width="20" height="20"></rect>
+      </g>
+    </svg>
+    
+    <!-- defs with <use> -->
+    <h2>Re-using pre-defined SVGs</h2>
+    <svg viewBox="0 0 100 100" style="background-color: pink;">
+      <defs>
+        <circle id="myCircle" cx="50" cy="50" r="40" fill="lightblue"></circle>
+      </defs>
+      <use href="#myCircle"></use>
+    </svg>
+
+    <!-- gradients -->
+    <h2>SVG gradients</h2>
+    <svg viewBox="0 0 100 100" style="background-color: wheat;">
+      <defs>
+        <linearGradient id="grad1">
+          <stop offset="0%" stop-color="red"></stop>
+          <stop offset="100%" stop-color="blue"></stop>
+        </linearGradient>
+      </defs>
+      <rect x="10" y="10" width="80" height="60" fill="url(#grad1)"></rect>
+    </svg>
+  </section>
+  
+  <!-- Use cases of SVGs -->
+  <section>
+    <!-- Animation with SVG -->
+    <h2>Loader effect</h2>
+    <svg viewBox="0 0 100 100">
+      <circle class="loader" cx="50" cy="50" r="40"></circle>
+    </svg>
+    
+    <!-- Re-use shpaes with <use> -->
+    <h2>Re-using shapes</h2>
+    <svg viewBox="0 0 100 100" style="background-color: mediumspringgreen;">
+      <defs>
+        <circle id="dot" r="5"></circle>
+      </defs>
+      
+      <use href="#dot" x="10" y="10"></use>
+      <use href="#dot" x="30" y="10"></use>
+      <use href="#dot" x="50" y="10"></use>
+    </svg>
+    
+    <!-- Create Gradients -->
+    <h2>Creating gradients</h2>
+    <svg viewBox="0 0 100 100" style="background-color: lightyellow;">
+      <defs>
+        <linearGradient id="grad">
+          <stop offset="0%" stop-color="crimson"></stop>
+          <stop offset="100%" stop-color="gold"></stop>
+        </linearGradient>
+      </defs>
+      
+      <rect x="10" y="10 "width="80" height="60" fill="url(#grad)"></rect>
+    </svg>
+    
+    <!-- Clip images with SVG -->
+    <h2>Clipping images with SVG</h2>
+    <svg viewBox="0 0 100 100">
+      <clipPath id="circleClip">
+        <circle cx="50" cy="50" r="40"></circle>
+      </clipPath>
+      
+      <image href="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/SVG/IMG_20260306_160855.jpg" x="10" y="10" width="100" height="80" clip-path="url(#circleClip)"></image>
+    </svg>
+    
+    <!-- Draw paths for complex icons -->
+    <h2>Drawing icons with path</h2>
+    <svg viewBox="0 0 100 100">
+      <path d="M10 10 L100 100 L10 100 Z" fill="silver"></path>
+    </svg>
+    
+    <!-- Using SVG for animated logos and loaders -->
+    <h2>Animated Logo</h2>
+    <svg viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" fill="yellow">
+        <animate attributeName="r" from="10" to="40" dur="1s" repeatCount="indefinite"></animate>
+      </circle>
+    </svg>
+  </section>
+  
+  <!-- This part is from the freeCodeCamp lecture -->
+  <section>
+    <!-- Face emoji -->
+    <h2>Face Emoji from fcc</h2>
+    <svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background-color: cyan;">
+      <circle cx="50" cy="50" r="45" stroke-width="4" fill="yellow"/>
+      <circle cx="35" cy="40" r="5" fill="black"/>
+      <circle cx="65" cy="40" r="5" fill="black"/>
+      <path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent"/>
+    </svg>
+    
+    <!-- Star Icon -->
+    <h2>Star Icon from fcc</h2>
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L122Z"></path>
+    </svg>
+    
+    <!-- Heart Icon -->
+    <h2>Heart Icon from fcc</h2>
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"></path>
+    </svg>
+    
+    <!-- Checkmark Icon -->
+    <h2>Checkmark Icon from fcc</h2>
+    <svg width="50" height="50" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"></path>
+    </svg>
+  </section>
+  <!-- Detecting clicks on the very first circle -->
+  <script>
+    document.querySelector("circle").addEventListener("click", ()=> {
+      alert("Circle clicked");}
+    );
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embedding a Map</title>
+</head>
+
+<body>
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+    <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=90.33700955130972%2C22.669091524220747%2C90.35851013877311%2C22.687029136546105&amp;layer=mapnik" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid black;" allowfullscreen loading="lazy"></iframe>
+  </div>
+
+    <br/>
+    <small>
+      <a href="https://www.openstreetmap.org/?#map=15/22.67806/90.34776" target="_blank">View Larger Map</a>
+    </small> 
+    
+    <h2>Steps to follow while embeddig map</h2>
+    <p>You can embed a map using an iframe in a few different ways depending on the map service: <br>
+    <p/><p>
+Google Maps
+Go to maps.google.com and search for a location
+Click Share → Embed a map
+Copy the &lt;iframe&gt; code provided
+Paste it into your HTML <br>
+&lt;iframe <br>
+  src="https://www.google.com/maps/embed?pb=!1m18!..." <br>
+  width="600" <br>
+  height="450" <br>
+  style="border:0;" <br>
+  allowfullscreen="" <br>
+  loading="lazy"&gt; <br>
+&lt;/iframe&gt; <br>
+<p/><p>
+OpenStreetMap <br>
+Go to openstreetmap.org and navigate to a location <br>
+Click the Share icon (on the right sidebar) <br>
+Check Include marker if needed, then copy the HTML iframe code <br>
+&lt;iframe <br>
+  width="425" <br>
+  height="350" <br>
+  src="https://www.openstreetmap.org/export/embed.html?bbox=..." <br>
+  style="border: 1px solid black" &gt; <br>
+&lt;/iframe&gt; <br>
+<p/><p>
+General iframe tips <br>
+width / height — set size in pixels or use 100% for responsive layouts <br>
+allowfullscreen — lets users expand the map <br>
+loading="lazy" — defers loading until the map is in view (good for performance) <br>
+style="border:0;" — removes the default border <br>
+<p/><p>
+Making it responsive <br>
+Wrap the iframe in a container div: <br>
+&lt;div style="position: relative; padding-bottom: <br> 56.25%; height: 0; overflow: hidden;"&gt; <br>
+  &lt;iframe <br>
+    src="YOUR_MAP_LINK_HERE" <br>
+    style="position: absolute; top: 0; left: 0; <br> width: 100%; height: 100%; border: 0;" <br>
+    allowfullscreen <br>
+    loading="lazy"&gt; <br>
+  &lt;/iframe&gt; <br>
+&lt;/div&gt; <br>
+This gives you a 16:9 aspect ratio map that scales with the page width.</p>
+</body>
+
+</html>

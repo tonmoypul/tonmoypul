@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real uses of &lt;audio&gt; & &lt;video&gt;</title>
+  <style>
+    .video-container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    
+    .video-player {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Embedding audio from my local storage -->
+  <audio src="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/About <audio> & <video>/Purnota(MP3_160K).mp3" controls loop muted type="audio/mpeg"></audio>
+  
+  <!-- embedding video from local storage -->
+  <section class="video-container">
+    <video id="mainVideo" class="video-player" autoplay loop muted controls poster="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/About <audio> & <video>/IMG_20260215_101444.jpg">
+      <source src="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/About <audio> & <video>/আজ একটা বিরাট ফাটাফাটি হইবো 🤣🤣(1080P_HD).mp4" type="video/mp4">
+      <source src="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/About <audio> & <video>/আজ একটা বিরাট ফাটাফাটি হইবো 🤣🤣(1080P_HD).webm" type="video/webm">
+      <track src="/HTML_From_freeCodeCamp/Casual_code_from_some_lectures/About <audio> & <video>/আজ একটা বিরাট ফাটাফাটি হইবো (1080P_HD).vtt" kind="subtitles" srclang="en" label="English" default></track>
+      Your browsr doesn't support HTML5 video.
+    </video>
+  </section>
+  <script>
+    const video=document.getElementById("mainVideo");
+    video.addEventListener("play", ()=> {
+      console.log("Video started");
+    });
+    video.addEventListener("pause", ()=> {
+      console.log("Video Paused");
+    });
+    video.addEventListener,("ended", ()=> {
+      console.log("Video finished");
+    });
+  </script>
+</body>
+
+</html>

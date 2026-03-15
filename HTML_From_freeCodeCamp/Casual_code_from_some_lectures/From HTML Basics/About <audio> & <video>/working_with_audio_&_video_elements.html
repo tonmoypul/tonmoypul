@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Description of 
+  &lt;audio&gt; and &lt;video&gt; tags and their usages</title>
+</head>
+
+<body>
+  <!-- Audio elements doesn't have much attributes and wide use as the video element -->
+  <!-- Here is the way to add any audio to HTML document -->
+  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3" loop
+    controls
+    muted></audio>
+  <!-- The loop attribute is used to make the audio or video loop over and over. It is used both in audio and video element -->
+  <!-- The controls attribute is used to show the audio controls such as play, pause, sound control etc. It is used in both audio and video elements. -->
+  <!-- The muted attribute is used to make sure when the video is played first, it is muted. Used in both audio and video element. -->
+  
+  <!-- All audio types are not supported on every browser. So you should use this code given below to make sure your content is accessible from every browser -->
+  <audio controls loop muted>
+    <source src="audio.ogg" type="audio/ogg">
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.wav" type="audio/wav">
+  </audio>
+  <!-- Here the source element is used so that you can give each type of the same audio to the browser and it will use the one which is supported on it -->
+  
+  <!-- Including a video element to HTML document -->
+  <video src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+    autoplay
+    loop
+    controls
+    muted
+    width="100%"
+    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?×11217"
+  ></video>
+  <!-- The autoplay is used so that the video starts playing automatically.-->
+  <!-- The width sets the width of the video screen -->
+  <!-- The poster attribute is used to give the video a thumbnail -->
+  
+  <!-- You should use multiple source elements inside your video element to ensure your content is accessible on every website -->
+  <video controls loop autoplay muted width="100%" poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?×11217">
+    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" type="video/mp4">
+    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm" type="video/webm">
+    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.ogg" type="video/ogg">
+    <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mov" type="video/quicktime">
+    Your browser doesn't support the video type
+  </video>
+</body>
+
+</html>

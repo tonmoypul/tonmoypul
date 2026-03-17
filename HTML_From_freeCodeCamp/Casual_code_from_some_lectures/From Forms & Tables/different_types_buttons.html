@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Different Button Types with their uses</title>
+</head>
+
+<body>
+  <h1>Button Page</h1>
+  <!-- This is the show alert section -->
+  <button type="button">Show Alert</button>
+  
+  <!-- This is the button type submit and reserlt section -->
+  <form action="">
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" class="email" name="email">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+  
+  <!-- This is the input type button section -->
+  <input type="button" class="start-btn" value="Start Game">
+  <script>
+  //This is the JS for show alert section
+    const btn = document.querySelector("button");
+    btn.addEventListener("click", () => alert("This alert pops up"));
+    
+    //This is the JS for the input type button section
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn2 = document.querySelector(".start-btn");
+      btn2.addEventListener("click", () => {
+        const paraE1 = document.createElement("p");
+        
+        paraE1.textContent = "The game has started!!!";
+        document.body.appendChild(paraE1);
+      });
+    });
+  </script>
+</body>
+
+</html>

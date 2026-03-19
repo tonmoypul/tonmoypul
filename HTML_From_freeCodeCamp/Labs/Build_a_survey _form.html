@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+  </head>
+  
+  <body>
+    <h1 id="title">Suyver Form</h1>
+    <p id="description">This is an certification project from fcc for responsive design.</p>
+    
+    <form action="" id="survey-form">
+      <fieldset id="basic-info">
+        <legend>Basic Information</legend>
+        
+        <label for="full-name" id="name-label">Full Name (required):</label>
+        <input type="text" id="full-name" name="full-name" required placeholder="e.g. John Doe">
+        
+        <label for="email-address" id="email-label">Email Address (required):</label>
+        <input type="email" id="email-address" name="email" required placeholder="example@email.com">
+        
+        <label for="age" id="number-label">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="50" placeholder="21">
+      </fieldset>
+      
+      <fieldset id="choices">
+        <legend>What do you prefer?</legend>
+        
+        <label for="dropdown">Who's your favorite bowler?</label>
+        <select name="favorite-bowler" id="dropdown">
+          <option value="placeholder" selected disabled>Select one bowler</option>
+          <option value="steyn">Dale Steyn</option>
+          <option value="starc">Mitchell Starc</option>
+          <option value="akhtar">Shoaib Akhtar</option>
+          <option value="lee">Brett Lee</option>
+          <option value="boult">Trent Boult</option>
+        </select>
+        
+      </fieldset>
+      
+      <fieldset id="agreement-with-my-opinion">
+        <legend>Is Dale Steyn The Best Fast Bowler You've seen in your age ?</legend>
+        <input type="radio" id="yes" name="agreement" value="yes" checked>
+        <label for="yes">Yes</label>
+        
+        <input type="radio" id="no" name="agreement" value="no">
+        <label for="no">No</label>
+        
+        <input type="radio" id="confused" name="agreement" value="don't-know">
+        <label for="confused">Whose Dale Steyn?</label>
+      </fieldset>
+      
+      <fieldset id="top10">
+        <legend>Who are the top 10 bowlers on your opinion?</legend>
+        
+        <input type="checkbox" id="dale-steyn" name="dale-steyn" value="dale-steyn">
+        <label for="dale-steyn">Dale Steyn</label>
+        
+        <input type="checkbox" id="philander" name="philander" value="philander">
+        <label for="philander">Philander</label>
+
+        <input type="checkbox" id="morkel1" name="morne-morkel" value="morne-morkel">
+        <label for="morkel1">Morne Morkel</label>
+
+        <input type="checkbox" id="morkel2" name="albie-morkel" value="albie-morkel">
+        <label for="morkel2">Albie Morkel</label>
+        
+        <input type="checkbox" id="starc" name="mitchell-starc" value="mitchell-starc">
+        <label for="starc">Mitchell Starc</label>
+        
+        <input type="checkbox" id="simba" name="brett-lee" value="brett-lee">
+        <label for="simba">Brett Lee</label>
+        
+        <input type="checkbox" id="jhonson" name="mitchell-jhonson" value="mitchell-jhonson">
+        <label for="jhonson">Mitchell Jhonson</label>
+        
+        
+        <input type="checkbox" id="nz1" name="trent-boult" value="trent-boult">
+        <label for="nz1">Trent Boult</label>
+        
+        
+        <input type="checkbox" id="nz2" name="tim-southee" value="tim-southee">
+        <label for="nz2">Tim Southee</label>
+        
+        <input type="checkbox" id="eng1" name="jimmy-anderson" value="jimmy-anderson">
+        <label for="eng1">Jimmy Anderson</label>
+        
+        <input type="checkbox" id="eng2" name="stuart-board" value="stuart-board">
+        <label for="eng2">Stuart Board</label>
+        
+        <input type="checkbox" id="eng3" name="archer" value="archer">
+        <label for="eng3">Jofra Archer</label>
+        
+        <input type="checkbox" id="pak1" name="shoaib-akhtar" value="shoaib-akhtar">
+        <label for="pak1">Shoaib Akhtar</label>
+        
+        <input type="checkbox" id="pak2" name="asif" value="asif">
+        <label for="pak2">Mohammad Asif</label>
+        
+        <input type="checkbox" id="pak3" name="amir" value="amir">
+        <label for="pak3">Mohammad Amir</label><br>
+        
+        <label for="other-bowlers">Other bowlers you want to mention:</label>
+        <textarea name="other-bowlers" id="other-bowlers" rows="8" cols="40" placeholder="Wasim Akram, Lasith Malinga etc."></textarea>
+
+      </fieldset>
+      
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>

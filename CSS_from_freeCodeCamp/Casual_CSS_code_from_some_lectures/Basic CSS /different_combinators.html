@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Use of different types of combinators</title>
+  <style>
+     body {
+      background-color: #474E4D;
+    }
+    
+    /* This code is only for descendant combinator. This shows that, you can select all images and apply style to them but, if you want specific styling to the images inside figure element, which is the anchestor or parent of the img element, then you use the descendent combinator by writing code as same as those on line 34*/
+    #descendant-combinator {
+      background-color: #90A5A2;
+    }
+    
+    figure {
+      border: 5px solid #07FFDD;
+      margin: 50px;
+    }
+    
+    /* This is line 34*/
+    figure img {
+      border: 4px solid white;
+    }
+    
+    img {
+      border: 12px dotted deepskyblue;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <!-- This codes are for the descendant combintor-->
+  <section id="descendant-combinator">
+    <figure>
+      <img src="https://cdn.pixabay.com/photo/2015/06/19/20/13/sunset-815270_1280.jpg" alt="Sunset at a rose field">
+      <img src="https://cdn.pixabay.com/photo/2022/09/29/10/46/grass-7487114_1280.jpg" alt="sunset at crop tip">
+      <img src="https://cdn.pixabay.com/photo/2022/03/04/14/19/nature-7047433_1280.jpg" alt="dawn">
+    </figure>
+
+    <figure>
+      <img src="https://cdn.pixabay.com/photo/2024/06/21/15/18/road-8844555_1280.jpg" alt="sunset at icy place">
+      <img src="https://cdn.pixabay.com/photo/2018/01/09/20/22/tree-3072431_1280.jpg" alt="beautiful sunset a a hill">
+      <img src="https://cdn.pixabay.com/photo/2018/01/27/23/00/nature-3112448_1280.jpg" alt="sunset at muddy road inside corp filed">
+      <img src="https://cdn.pixabay.com/photo/2022/08/09/22/06/field-7375948_1280.jpg" alt="some kinda corp harvesting">
+    </figure>
+
+    <img src="https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_1280.jpg" alt="beautiful clouds on the dawn">
+    <img src="https://cdn.pixabay.com/photo/2015/12/29/23/17/mountains-1113547_1280.jpg" alt="sunrise at mountain">
+    <img src="https://cdn.pixabay.com/photo/2020/10/10/17/53/sunrise-5643811_1280.jpg" alt="image of sunrise at africa">
+  </section>
+  
+</body>
+
+</html>

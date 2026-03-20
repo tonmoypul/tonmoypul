@@ -29,7 +29,21 @@
       border: 12px dotted deepskyblue;
     }
     
+    /* This code is for the child combinator. In the child comhinator, the direct children of a parent element is selected as you can see on the #child-combinator section and in the line 56*/
+    #child-combinator {
+      background-color: white;
+    }
     
+    /* This 2 line code below is used as a practice of the descendant comhinator*/
+    .container p {
+      color: green;
+    }
+    
+    /* But this is child combinator*/
+    /* This is line 56 */
+    .container > p {
+      color: red;
+    }
   </style>
 </head>
 
@@ -53,6 +67,21 @@
     <img src="https://cdn.pixabay.com/photo/2015/12/29/23/17/mountains-1113547_1280.jpg" alt="sunrise at mountain">
     <img src="https://cdn.pixabay.com/photo/2020/10/10/17/53/sunrise-5643811_1280.jpg" alt="image of sunrise at africa">
   </section>
+  
+  <section id="child-combinator">
+    <div class="container">
+      <!-- This p element is the direct children of the .container div-->
+      <p>First</p>
+      <div>
+        <p>Second</p>
+      </div>
+      <div>
+        <p>Third</p>
+      </div>
+    </div>
+    <p>This paragraph is outside of the . container div so out of any design</p>
+  </section>
+  
   
 </body>
 

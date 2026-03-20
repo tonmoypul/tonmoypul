@@ -44,6 +44,28 @@
     .container > p {
       color: red;
     }
+    
+    /* This code is for the next-sibling comhinator. You can use this selector by any of these lines codes, line 123, line 234, line 345*/
+    #next-sibling-combinator {
+      background-color: powderblue;
+    }
+    
+    /* This is line 123*/
+    /*.container2 p + p {
+      color: blue;
+    }*/
+    
+    /* This is line 234*/
+    /*p+p{
+      color: deeppink;
+    }*/
+    
+    /* This is line 345*/
+    #specified + p {
+      color: magenta;
+    }
+    
+    
   </style>
 </head>
 
@@ -82,7 +104,14 @@
     <p>This paragraph is outside of the . container div so out of any design</p>
   </section>
   
+  <section id="next-sibling-combinator">
+    <div class="container2">
+      <p id="specified">This is the diresct children with specified id</p>
+      <p>This is the unspecified next-sibling of the p element with id</p>
+    </div>
+  </section>
   
+  <section id="subsequent-sibling-combinator"></section>
 </body>
 
 </html>

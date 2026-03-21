@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Combinators</title>
+  <style>
+    ul li {
+      display: inline;
+      background-color: yellow;
+    }
+    
+    .container {
+      background-color: black;
+      color: white;
+    } 
+    
+    h2 + p{ 
+      background-color: red;
+    }
+    
+    .ul~p {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  
+  <div class="container">
+    <p>This will be styled</p>
+    <div>
+      <p>This wiill not be styled</p>
+    </div>
+  </div>
+  
+  <h2>This is a subheading</h2>
+  <p>This will get a red bg</p>
+  
+  <div class="container2">
+    <p>This will not be styled</p>
+    <ul class="ul">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <p>This will be styled</p>
+  </div>
+  <p>This will not be styled</p>
+</body>
+
+</html>

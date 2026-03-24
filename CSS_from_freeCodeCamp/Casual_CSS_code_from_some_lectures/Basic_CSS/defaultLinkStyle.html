@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Different Link States</title>
+  <style>
+    a:link {
+      color: blue;
+      text-decoration: none;
+      border-bottom: 1px solid blue;
+    }
+    
+    a:visited {
+      color: purple; 
+      border-bottom: 1px solid purple;
+    }
+    
+    a:hover {
+      color: darkblue;
+      cursor: pointer;
+      background-color: rgba(0, 0, 255, 0.4);
+      border-bottom: 1px solid darkblue;
+
+    }
+    
+    a:focus {
+      outline: 2px dotted darkblue;
+      outline-offset: 2px;
+    }
+    
+    a:active {
+      color: crimson;
+      border-bottom: 1px solid crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" target="_blank">Example Link</a>
+</body>
+
+</html>

@@ -6,12 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cafe Menu</title>
   <style>
+    
     body {
       background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+      font-family: Times New Roman;
+      padding: 20px;
     }
     
     h1,h2,p {
       text-align: center;
+    }
+    
+    h1, h2 {
+      font-family: Impact, Sans-Serif;
+    }
+    
+    h1 {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    .established {
+      font-style: Italic;
     }
     
     .menu {
@@ -19,21 +40,75 @@
       background-color: burlywood;
       margin-left: auto;
       margin-right: auto;
+      padding: 20px;
+      max-width: 500px;
     }
     
-    .flavour {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -25px;
+    }
+    
+    .item p {
+      display: inline-block;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      font-size: 18px;
+    }
+    
+    .flavor, .dessert {
       text-align: left;
-      width: 50%;
+      width: 74%;
     }
     
     .price {
       text-align: right;
-      width: 50%;
+      width: 25%;
     }
     
-
-    .item p {
-      display: inline-block;
+    hr {
+      height: 2px;
+      background-color: brown;
+      border-color: burlywood;
+    }
+    
+    .bottom-line {
+      margin-top: 25px;
+    }
+    
+    /*FOOTER */
+    footer {
+      font-size: 14px;
+    }
+    
+    address {
+      font-style: normal;
+    }
+    
+    a {
+      color: black;
+    }
+    
+    a:visited {
+      color: black;
+    }
+    
+    a:hover {
+      color: brown;
+    }
+    
+    a:active {
+      color: brown;
+    }
+    
+    a:focus {
+      outline: 1px solid white;
+    }
+    
+    .address {
+      margin-bottom: 5px;
     }
   </style>
 </head>
@@ -42,31 +117,51 @@
   <div class="menu">
     <main>
       <h1>CAMPER CAFE</h1>
-      <p>Est. 2020</p>
+      <p class="established">Est. 2020</p>
+      <hr>
       <section>
         <h2>Coffe</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon">
         <article class="item">
-          <p class="flavour">French Vanilla</p><p class="price">3.00</p>
+          <p class="flavor">French Vanilla</p><p class="price">3.00</p>
         </article>
         <article class="item">
-          <p class="flavour">Caramel Macchiato</p>
-          <p class="price">3.75</p>
+          <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
         </article>
         <article class="item">
-          <p class="flavour">Pumpkin Spice</p>
-          <p class="price">3.50</p>
+          <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
         </article>
         <article class="item">
-          <p class="flavour">Hazelnut</p>
-          <p class="price">4.00</p>
+          <p class="flavor">Hazelnut</p><p class="price">4.00</p>
         </article>
         <article class="item">
-          <p class="flavour">Mocha</p>
-          <p class="price">4.50</p>
+          <p class="flavor">Mocha</p><p class="price">4.50</p>
         </article>
       </section>
-      <section></section>
+      <section>
+        <h2>Desserts</h2>
+        <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon">
+        <article class="item">
+          <p class="dessert">Donut</p><p class="price">1.50</p>
+        </article>
+        <article class="item">
+          <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+        </article>
+        <article class="item">
+          <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+        </article>
+        <article class="item">
+          <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+        </article>
+      </section>
     </main>
+    <hr class="bottom-line">
+    <footer>
+      <address>
+        <p><a href="https://www.freecodecamp.org" target="_blank">Visit Our Website</a></p>
+        <p class="address">123 Free Code Camp Drive</p>
+      </address>
+    </footer>
   </div>
 </body>
 

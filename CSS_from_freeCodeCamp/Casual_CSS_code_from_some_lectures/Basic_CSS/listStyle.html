@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Some Properties For List Style</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    
+    #ul {
+      background-color: #DAC83F;
+    }
+    
+    #ol {
+      background-color: #3DDA5C;
+    }
+    
+    .inside {
+      list-style-type: circle;
+      list-style-position: inside;
+    }
+    
+    .outside {
+      list-style-type: square;
+      list-style-position: outside;
+    }
+    
+    ol {
+      list-style-position: inside;
+    }
+    
+    #decimal {
+      list-style-type: decimal;
+    }
+    
+    #lower-alpha {
+      list-style-type: lower-alpha;
+    }
+    
+    #upper-alpha {
+      list-style-type: upper-alpha;
+    }
+    
+    #lower-roman {
+      list-style-type: lower-roman;
+    }
+    
+    #upper-roman {
+      list-style-type: upper-roman;
+    }
+    
+    #ul, #ol {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    
+    .list-type-image ul,
+    .list-type-image ol {
+      list-style-image: url(star-solid.svg);
+      list-style-position: inside;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>List Style Type, List Style Position</h2>
+  <section id="ul">
+    <h3>For Unordered List</h3>
+    <ul class="inside">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <ul class="outside">
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+    </ul>
+    <p style="font-weight: bold;">Another &lt;ul&gt; for disc type</p>
+    <ul style="list-style-position: inside;">
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+    </ul>
+  </section>
+  <section id="ol">
+    <h3>For Ordered List</h3>
+    <ol id="decimal">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+    <ol id="lower-alpha">
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+    </ol>
+    <ol id="upper-alpha">
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+    </ol>
+    <ol id="lower-roman">
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 11</li>
+    </ol>
+    <ol id="upper-roman">
+      <li>Item 12</li>
+      <li>Item 13</li>
+      <li>Item 14</li>
+    </ol>
+  </section>
+  <h2>List Style Image</h2>
+  <section class="list-type-image">
+    <ul>
+      <li>Image 1</li>
+      <li>Image 2</li>
+    </ul>
+    <ol>
+      <li>Image 3</li>
+      <li>Image 4</li>
+    </ol>
+  </section>
+</body>
+
+</html>

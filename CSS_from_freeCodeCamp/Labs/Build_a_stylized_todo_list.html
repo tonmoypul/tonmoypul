@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styled To Do List</title>
+  <style>
+    body {
+      background-color: floralwhite;
+      padding-left: 20px;
+      font-size: 18px;
+    }
+    
+    .container {
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 2px 2px 5px black;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 600px;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .item {
+     background-color: lightgray;
+     margin-bottom: 18px;
+     padding: 10px 10px 25px 10px;
+     border-radius: 15px;
+    }
+    
+    .todo-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .sub-item {
+      list-style-type: square;
+      padding-top: 15px;
+      margin: 2px 0 10px 20px;
+    }
+    
+    .sub-item li {
+      padding-left: 5px;
+    }
+
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: purple;
+    }
+
+    a:hover {
+      color: darkblue;
+    }
+
+    a:focus {
+      outline: 2px solid deepskyblue;
+    }
+
+    a:active {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>My To Do List</h1>
+    <ul class="todo-list">
+      <li class="item">
+        <input type="checkbox" id="webDev">
+        <label for="webDev">Web Development</label>
+        <ul class="sub-item">
+          <li><a href="https://share.google/NuAxI4vDy2hSboEbk" target="_blank">Site Link</a></li>
+        </ul>
+      </li>
+      <li class="item">
+        <input type="checkbox" id="cybersecurity">
+        <label for="cybersecurity">Cybersecurity</label>
+        <ul class="sub-item">
+          <li><a href="https://www.w3schools.com/cybersecurity/" target="_blank">Playlist Link</a></li>
+        </ul>
+      </li>
+      <li class="item">
+        <input type="checkbox" id="SE">
+        <label for="SE">Software Engineer</label>
+        <ul class="sub-item">
+          <li><a href="https://phitron.io/" target="_blank">Application Link</a></li>
+        </ul>
+      </li>
+      <li class="item">
+        <input type="checkbox" id="teacher">
+        <label for="teacher">Teacher</label>
+        <ul class="sub-item">
+          <li><a href="https://share.google/XQdIDoC3pKpjG9W5k" target="_blank">Delete Issues</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

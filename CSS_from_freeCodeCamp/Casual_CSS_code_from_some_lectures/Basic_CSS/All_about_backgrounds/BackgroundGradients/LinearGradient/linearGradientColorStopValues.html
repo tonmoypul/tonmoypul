@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Different Variations to declare color stops</title>
+  <style>
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 7px;
+      color: whitesmoke;
+    }
+    
+    .container {
+      background-color: dimgray;
+      padding: 10px 10px 20px 30px;
+    }
+    
+    .simpleTwoGradient {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red, blue);
+    }
+    
+    .explicitPercentage {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red 40%, blue 70%);
+    }
+    
+    .lengthBased {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red 50px, blue 110px);
+    }
+    
+    .multipleStops {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red 15%, yellow 35%, green 70%);
+    }
+    
+    .hardStop {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red 30%, blue 30% 40%, yellow 40% 60%, purple 60%);
+    }
+    
+    .transparent {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, darkgreen, green, limegreen, lawngreen, transparent);
+    }
+    
+    .semi-transparent {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, rgba(0,175,0,0.5), rgba(255,0,0,0.5));
+    }
+    
+    .colorHeld {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(0.5turn, skyblue 0% 33%, white 33% 66%, skyblue 66% 100%);
+    }
+    
+    .multiStopTransparency {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to bottom, rgba(0,255,0,0.8) 0%, rgba(0,255,0,0.4) 40%, transparent 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Simple Two-Color Gradient </h2>
+    <div class="simpleTwoGradient"></div>
+    <h2>Explicit Percentage Positions</h2>
+    <div class="explicitPercentage"></div>
+    <h2>Length Based Positions</h2>
+    <div class="lengthBased"></div>
+    <h2>Multiple Color Stops</h2>
+    <div class="multipleStops"></div>
+    <h2>Hard Stop ( no blend, sharp edge )</h2>
+    <div class="hardStop"></div>
+    <h2>Fade to/from transparent</h2>
+    <div class="transparent"></div>
+    <h2>Semi Transparent Stop</h2>
+    <div class="semi-transparent"></div>
+    <h2>Color Held Between Two Positions</h2>
+    <div class="colorHeld"></div>
+    <h2>Multi-stop Transparency</h2>
+    <div class="multiStopTransparency"></div>
+  </div>
+</body>
+
+</html>

@@ -4,11 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Different Variations for linear gradient useage</title>
+  <style>
+    body {
+      background-color: #052A36;
+      color: white;
+    }
+    h2 {
+      margin: 30px auto 7px;
+    }
+    
+    .standard {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red, blue);
+    }
+    
+    .diagonal {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, #f06, #48f);
+    }
+    
+    .hardStripe {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red 50%, blue 50%);
+    }
+    
+    .multiStop {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to right, red, orange, yellow, green,  blue);
+    }
+    
+    .fade {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to bottom, blue, transparent);
+    }
+    
+    .repeating {
+      width: 200px;
+      height: 200px;
+      background: repeating-linear-gradient(45deg, #333 0px, #333 5px, #555 5px, 
+      #555 10px);
+    }
+  </style>
 </head>
 
 <body>
-  
+  <h2>Standard</h2>
+  <div class="standard"></div>
+  <h2>Diagonal</h2>
+  <div class="diagonal"></div>
+  <h2>Hard Stop — sharp stripe</h2>
+  <div class="hardStripe"></div>
+  <h2>Multi-stop</h2>
+  <div class="multiStop"></div>
+  <h2>Transparent fade</h2>
+  <div class="fade"></div>
+  <h2>Repeating</h2>
+  <div class="repeating"></div>
 </body>
 
 </html>

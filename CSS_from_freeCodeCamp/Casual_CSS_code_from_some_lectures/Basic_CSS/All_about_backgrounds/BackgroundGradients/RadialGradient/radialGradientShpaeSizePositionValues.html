@@ -4,10 +4,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Different shapes and sizes for radial gradient</title>
+  <style>
+    body {
+      background-color: #052A36;
+      color: white;
+    }
+    h2 {
+      margin: 30px auto 7px;
+    }
+    
+    p {
+      margin-top: 0;
+    }
+    
+    .ellipse {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(ellipse farthest-corner at center, darkblue 50%,
+      lawngreen 50%);
+    }
+    
+    .circle {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(circle farthest-corner at center, red 40%, green 40%);
+    }
+    
+    .farthestCorner {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(circle farthest-corner at 40% 20%, red, blue, green);
+    }
+    
+    .closestCorner {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(circle closest-corner at 40% 20%, red, blue, green);
+    }
+    
+    .farthestSide {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(circle farthest-side at center, red, blue, green);
+    }
+    
+    .closestSide {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(circle closest-side at center, red, blue, green);
+    }
+    
+    .explicitLength {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      ellipse 200px 100px at center, red, blue, green);
+    }
+    
+    .explicitRadius {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      circle 150px at center, crimson, cyan, limegreen);
+    }
+    
+    .positionAtCenter {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      circle farthest-corner at center, crimson, cyan, limegreen);
+    }
+    
+    .positionAtTopLeft {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      circle farthest-corner at top left, crimson, cyan, limegreen);
+    }
+    
+    .positionAtPercentage {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      circle farthest-corner at 30% 70%, crimson, cyan, limegreen);
+    }
+    
+    .positionAtLength {
+      width: 450px;
+      height: 300px;
+      background: radial-gradient(
+      circle farthest-corner at 100px 50px, crimson, cyan, limegreen);
+    }
+  </style>
 </head>
 
 <body>
+  <h2>Shape Value: Ellipse</h2>
+  <div class="ellipse"></div>
+  
+  <h2>Shape Value: Circle</h2>
+  <div class="circle"></div>
+  
+  
+  <h2>Size Value: farthest-corner</h2>
+  <p>Default. Extends to the farthes corner</p>
+  <div class="farthestCorner"></div>
+  
+  <h2>Size Value: closest-corner</h2>
+  <p>Ends at the nearesr corner</p>
+  <div class="closestCorner"></div>
+  
+  <h2>Size Value: farthest-side</h2>
+  <p>Extends to the farthest side</p>
+  <div class="farthestSide"></div>
+  
+  <h2>Size Value: closest-side</h2>
+  <p>Ends at the nearest side</p>
+  <div class="closestSide"></div>
+  
+  <h2>Size Value: 100px 60px</h2>
+  <p>Explicit Width and Height ( ellipse only )</p>
+  <div class="explicitLength"></div>
+  
+  <h2>Size Value: 80px</h2>
+  <p>Expicit Radius ( circle only )</p>
+  <div class="explicitRadius"></div>
+  
+  
+  <h2>Position Value: at center</h2>
+  <p>Default. Center of the element</p>
+  <div class="positionAtCenter"></div>
+  
+  <h2>Position Value: at top left</h2>
+  <div class="positionAtTopLeft"></div>
+  
+  <h2>Position Value: at 30% 70%</h2>
+  <p>Percentage-based position</p>
+  <div class="positionAtPercentage"></div>
+  
+  <h2>Position Value: 100px 50px</h2>
+  <p>Length-based position</p>
+  <div class="positionAtLength"></div>
+  
   
 </body>
 
